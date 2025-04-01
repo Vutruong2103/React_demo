@@ -1,11 +1,23 @@
 //fill tạo nên giao diện ta nhìn thấy trên màn hình
 import './App.scss';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header/Header';
+import { Outlet } from 'react-router-dom';
 
 const App = () => {
   return (
     <div className="app-container">
-      hi
+      <div className='header-container'>
+      <Header></Header>
+      </div>
+      <div className='main-container'>
+        <div className='sidenav-container'>
+
+        </div>
+        <div className='app-content'>
+          <Outlet></Outlet>
+        </div>
+      </div>
     </div>
   );
 }

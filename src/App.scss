@@ -8,5 +8,82 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+//làm ứng dụng to hơnhơn
+  @media (min-width: 1350px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1300px !important; //ghi đè 
+    }
+}
+}
+
+.app-container{
+  .header-container{
+    .btn-login{
+      border-radius: 5px; //bo tròn
+      margin-right: 15px;
+      padding: 0 15px; //khoảng cách lề với chữ login
+      border: 1px solid #535353; //viền 
+      height: 40px;
+    }
+    .btn-signup{ 
+      border-radius: 5px;
+      padding: 0 15px; 
+      background: #303030;
+      color: white;
+      height: 40px;
+
+      &:hover{
+        background: black;
+      }
+    }
+    .navbar{
+      z-index: 10; //hiển thị thanh navbar lên
+      // opacity: 0.6; //làm mờ
+      background-color: rgba(0,0,0,0) !important;
+      .nav-link{
+        padding-top: 20px;
+        &.active{
+          color: rgb(0, 205, 251);
+        }
+      }
+    }
+  }
+  .homepage-container{
+    .homepage-content{
+      padding: 100px;
+      width: 50%;//lay nua man hinh
+      position: relative;//hiện chữ bị ghi đè lên
+      display: flex;
+      flex-direction: column;//nằm theo chiều dọcdọc
+      gap: 30px;// dùng được khi có flex, khoảng cách các chữ
+      .title-1{
+        font-size: 35px;
+        font-weight: 600;
+      }
+      .title-2{
+        font-size: 22px;
+      }
+      .title-3{
+        button{
+          border-radius: 5px;
+          height: 40px;
+          padding: 0 15px; 
+          background: #303030;
+          color: white;
+          height: 40px;
+          border: none;
+          &:hover{
+            background: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+video{
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
 }
 
